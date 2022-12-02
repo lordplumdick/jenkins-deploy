@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - apt-get install curl -y
-      - curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+      - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
       - apt-get clean
       - apt install nodejs -y
       - echo Entered the install phase...
