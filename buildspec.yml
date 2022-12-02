@@ -2,9 +2,8 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs 
     commands:
+      - apt install nodejs npm
       - echo Entered the install phase...
       - npm init -yy
       - npm i --save @11ty/eleventy
