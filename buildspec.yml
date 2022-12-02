@@ -3,6 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
+      - apt-get install curl -y
+      - curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
       - apt install nodejs npm
       - echo Entered the install phase...
       - npm init -yy
