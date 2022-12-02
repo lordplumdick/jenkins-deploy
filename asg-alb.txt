@@ -1,0 +1,28 @@
+{
+    "Listeners": [
+        {
+            "ListenerArn": "arn:aws:elasticloadbalancing:us-east-1:442816435602:listener/app/aws-site-lb/989708702fb2ebfa/faf35bedcc2773d3",
+            "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1:442816435602:loadbalancer/app/aws-site-lb/989708702fb2ebfa",
+            "Port": 80,
+            "Protocol": "HTTP",
+            "DefaultActions": [
+                {
+                    "Type": "forward",
+                    "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:442816435602:targetgroup/aws-site-targets/aa076c191cef8c2b",
+                    "ForwardConfig": {
+                        "TargetGroups": [
+                            {
+                                "TargetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:442816435602:targetgroup/aws-site-targets/aa076c191cef8c2b",
+                                "Weight": 1
+                            }
+                        ],
+                        "TargetGroupStickinessConfig": {
+                            "Enabled": false
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+aws-site-lb-1992307101.us-east-1.elb.amazonaws.com

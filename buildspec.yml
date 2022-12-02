@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - npm init -yy
+      - npm i --save @11ty/eleventy
+      - npm i --save js-yaml 
+    finally:
+      - echo Installation done
+  build:
+    commands:
+      - echo Entered the build phase ...
+      - npm run build
+    finally:
+      - echo Building the HTML files finished
+  post_build:
+    commands:
+      - echo Current directory is $CODEBUILD_SRC_DIR
+      - ls -la
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist

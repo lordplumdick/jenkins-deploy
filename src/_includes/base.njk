@@ -1,0 +1,54 @@
+---
+tags: posts
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <style>
+    body {
+      text-align:center;
+    }
+    div.container {
+      width:600px;
+      margin: 0 auto;
+    }
+    div.left {
+  text-align: left;
+}
+.vibe { font-size: 150%;}
+.posthead { font-size: 150%;}
+.posttext { font-size: 100%;}
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.box:nth-child(even) {
+  background-color: #ccc;
+  color: #000;
+}
+
+.wrapper {
+  width: 600px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 140px);
+  grid-template-rows: 100px 100px 100px;
+  grid-auto-flow: row;
+}
+</style>
+</head>
+<body>
+  <header>
+    <a href="/">Home</a> | <a href="/posts">Posts</a> | <a href="/about">About</a>
+  </header>
+  {{ content | safe }}
+</body>
+</html>
+

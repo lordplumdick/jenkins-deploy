@@ -1,0 +1,23 @@
+version: 0.0
+os: linux
+files:
+ - source: /
+   destination: /var/www/html/
+hooks:
+ AfterInstall:
+  - location: scripts/httpd_install.sh
+    timeout: 300
+    runas: root
+# Uses script from the last successful revision
+ ApplicationStop:
+  - location: scripts/httpd_stop.sh
+    timeout: 300
+    runas: root
+ ApplicationStart:
+  - location: scripts/httpd_start.sh
+    timeout: 300
+    runas: root
+ ValidateService:
+  - location: scripts/validate.sh
+    timeout: 300
+    runas: root

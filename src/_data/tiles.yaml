@@ -1,0 +1,26 @@
+---
+tiles:
+- name: EC2
+  url: https://aws.amazon.com/ec2/
+  img: ec2.png
+- name: VPC
+  url: https://aws.amazon.com/vpc/
+  img: vpc.png
+- name: S3
+  url: https://aws.amazon.com/s3/
+  img: s3.png
+- name: Lamda
+  url: https://aws.amazon.com/lambda/
+  img: lambda.png
+- name: DynamoDB
+  url: https://aws.amazon.com/dynamodb/
+  img: dynamodb.png
+- name: Aurora
+  url: https://aws.amazon.com/rds/aurora/
+  img: aurora.png
+- name: Cloudwatch
+  url: https://aws.amazon.com/cloudwatch/
+  img: cloudwatch.png
+- name: CloudFormation
+  url: https://aws.amazon.com/cloudformation/
+  img: cloudformation.png

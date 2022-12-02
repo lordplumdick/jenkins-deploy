@@ -1,0 +1,51 @@
+{
+  "Comment": "An example of the Amazon States Language using a choice state.",
+  "StartAt": "FirstState",
+  "States": {
+    "FirstState": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:442816435602:function:choice",
+      "Next": "ChoiceState"
+    },
+    "ChoiceState": {
+      "Type" : "Choice",
+      "Choices": [
+        {
+          "Variable": "$.role",
+          "NumericEquals": 1,
+          "Next": "FirstMatchState"
+        },
+        {
+          "Variable": "$.role",
+          "NumericEquals": 2,
+          "Next": "SecondMatchState"
+        }
+      ],
+      "Default": "DefaultState"
+    },
+
+    "FirstMatchState": {
+      "Type" : "Task",
+      "Resource": "arn:aws:lambda:us-east-1:442816435602:function:firstmatch",
+      "Next": "NextState"
+    },
+
+    "SecondMatchState": {
+      "Type" : "Task",
+      "Resource": "arn:aws:lambda:us-east-1:442816435602:function:secondmatch",
+      "Next": "NextState"
+    },
+
+    "DefaultState": {
+      "Type": "Fail",
+      "Error": "DefaultStateError",
+      "Cause": "No Matches!"
+    },
+
+    "NextState": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:442816435602:function:nextstate",
+      "End": true
+    }
+  }
+}

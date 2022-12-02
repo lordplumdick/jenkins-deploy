@@ -1,0 +1,19 @@
+---
+title: AWS
+layout: base.njk
+---
+
+<div class="container">
+  <h1><a href="https://aws.amazon.com/"><img id="image" src="aws.png" alt="Amazon Web Services" style="width:200px;height:100px;"></a></h1>
+
+
+<div class="wrapper">
+<!- {{meta.userId}} >
+{% for tile in tiles.tiles %}
+<div class="{{ tile.name }}">
+      <h2><a href="{{ tile.url }}" target="_blank"><img src="{{tile.img }}" alt="{{ tile.name }}" style="width:140px;height:80px;"></a></h2>
+   </div>
+  {% endfor %}
+  </div>
+</div>
+<script src="/js/vibe.js"></script>

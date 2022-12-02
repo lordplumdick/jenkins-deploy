@@ -1,0 +1,20 @@
+{
+  "name": "3-build-with-ssg",
+  "version": "1.0.0",
+  "description": "# 3 - Building with a statsic site generator",
+  "main": "vibe.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Steve",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "eleventy-plugin-youtube-embed": "^1.6.5",
+    "js-yaml": "^3.14.0"
+  }
+}
