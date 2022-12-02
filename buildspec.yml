@@ -6,7 +6,7 @@ phases:
       - apt-get install curl -y
       - curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
       - apt-get clean
-      - apt-get install nodejs npm
+      - apt-get install nodejs
       - echo Entered the install phase...
       - npm init -yy
       - npm i --save @11ty/eleventy
